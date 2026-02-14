@@ -72,8 +72,6 @@ class Curl
             throw new ClientException($responseCode, $result);
         }
 
-        curl_close($ch);
-
         return $result;
     }
 }

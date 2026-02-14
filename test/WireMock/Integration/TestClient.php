@@ -25,11 +25,7 @@ class TestClient
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         }
 
-        $result = $this->_makeTimedRequest($ch);
-
-        curl_close($ch);
-
-        return $result;
+        return $this->_makeTimedRequest($ch);
     }
 
     public function post($path, $body)
@@ -39,11 +35,7 @@ class TestClient
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
 
-        $result = $this->_makeTimedRequest($ch);
-
-        curl_close($ch);
-
-        return $result;
+        return $this->_makeTimedRequest($ch);
     }
 
     /**
